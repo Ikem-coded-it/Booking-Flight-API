@@ -1,23 +1,23 @@
 @url = 'http://localhost:3000/'
 
-GET http://localhost:3000/flights HTTP/1.1
+GET http://localhost:3000/flights HTTP/1.1  //GET ALL FLIGHTS
 
 ###
-GET http://localhost:3000/flights/49a149c4-baee-4686-9f35-9f6baaffa03e HTTP/1.1
+GET http://localhost:3000/flights/ HTTP/1.1    //GET SINGLE FLIGHT(INCLUDE FLIGHT ID IN URL)
 
 ###
-POST http://localhost:3000/flights HTTP/1.1
+POST http://localhost:3000/flights HTTP/1.1  //BOOK FLIGHT
 Content-Type: application/json
 
 {
-    "title": "Flight to Morroco",
-    "time": "10pm",
+    "title": "Flight to Canada",
+    "time": "1pm",
     "price": 26000,
     "date": "26-6-2022"
 }
 
 ###
-PUT http://localhost:3000/flights/eda37551-e3c8-4276-87ab-64959a0b754e HTTP/1.1
+PUT http://localhost:3000/flights/ HTTP/1.1    //UPDATE FLIGHT(INCLUDE FLIGHT ID IN URL)
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/flights/3cec43d2-b7db-4fe9-a9c4-be333a9a7e89 HTTP/1.1
+DELETE http://localhost:3000/flights/ HTTP/1.1    //DELETE FLIGHT(INCLUDE FLIGHT ID IN URL)
